@@ -620,71 +620,189 @@ class ProgramLoader
 
     @programs.tutorials.introTutorial =
       submenu: "Intro"
-      title: "intro"
+      title: "start"
       code: """
-            // Lines beginning with two
-            // slashes (like these) are just comments.
+            // Computer verstehen leider kein Deutsch.
+            // Damit der Computer macht was du willst musst du seine Sprache lernen.
+            // Versuch es einmal Tipp einfach 'ball' ein und schau was passiert.
 
-            // Everything else is run
-            // about 30 to 60 times per second
-            // in order to create an animation.
 
-            // Click the link below to start the tutorial.
 
-            // next-tutorial:hello_world
+            // Klicke hier um weiter zu machen
+            // next-tutorial:level2
             """
 
-    @programs.tutorials.helloworldTutorial =
+
+    @programs.tutorials.level2Tutorial =
       submenu: "Intro"
-      title: "hello world"
+      title: "level 2"
       code: """
-            // type these three letters
-            // in one of these empty lines below:
-            // 'b' and 'o' and 'x'
+            // Klasse du hast deinen ersten Befehl gelernt!
+            // Ein einziger Befehl ist aber ein wenig langweilig.
+            // Schau mal was passiert wenn du über 'ball' 'move' eingibst.
 
+            ball
 
-
-            // (you should then see a box facing you)
-            // click below for the next tutorial
-            // next-tutorial:some_notes
+            // next-tutorial:level3
             """
 
-    @programs.tutorials.somenotesTutorial =
+    @programs.tutorials.level3Tutorial =
       submenu: "Intro"
-      title: "some notes"
+      title: "level 3"
       code: """
-            // If this makes sense to you:
-            // the syntax is similar to Coffeescript
-            // and the commands are almost
-            // like Processing.
+            // Mit dem 'move' Befehl kannst du die Position verändern wo der Computer Dinge hinzeichnet
+            // Der Computer liest deine Befehle von oben nach unten
+            // Du kannst das einmal ausprobieren wenn du einen 'ball' Befehl vor dem 'move' Befehl eingibst
 
-            // If this doesn't make sense to you
-            // don't worry.
+            move
+            ball
 
-            // next-tutorial:rotate
+            // Du siehst die erste Kugel bleibt stehen und nur die zweite wird verschoben
+
+            // next-tutorial:level4
             """
 
-    @programs.tutorials.rotateTutorial =
+    @programs.tutorials.level4Tutorial =
       submenu: "Intro"
-      title: "a taste of animation"
+      title: "level 4"
       code: """
-            // now that we have a box
-            // let's rotate it:
-            // type 'rotate 1' in the
-            // line before the 'box'
+            // Der 'move' Befehl kann noch mehr
+            // Du kannst genau bestimmen in welche Richtung verschoben wird
 
+            // Die erste Zahl verschiebt nach rechts oder links
+            // Die zweite Zahl verschiebt nach oben oder unten
+            // Die dritte Zahl verschiebt nach vorne oder hinten
 
-            box
+            move 0, 0, 0
+            ball
 
-            // click for the next tutorial:
-            // next-tutorial:frame
+            // Probier einmal unterschiedliche Zahlen aus
+            // Was passiert, wenn du Minus verwendest?
+
+            // next-tutorial:level5
+
             """
 
-    @programs.tutorials.frameTutorial =
+
+    @programs.tutorials.level5Tutorial =
+      submenu: "Intro"
+      title: "level 5"
+      code: """
+            // Den 'ball' Befehl kann auch noch mehr
+            // Die Zahl verändert die Größe
+
+            ball 1
+
+            // Probier einmal unterschiedliche Zahlen aus
+            // Kannst du den Ball größer machen als den ganze Bildschirm?
+
+            // next-tutorial:level6
+
+            """
+
+    @programs.tutorials.level6Tutorial =
+      submenu: "Intro"
+      title: "level 6"
+      code: """
+            // Versuch eimal einen Schneemann zu bauen
+            // Fang mit einem großen Ball an
+            // verschiebe nach jedem Ball mit 'move' die Position nach oben
+
+            move 0, -0.6, 0
+            ball 1
+            move 0, 0.9, 0
+
+            // ... hier kannst du weiter machen
+
+            // next-tutorial:level7
+
+            """
+
+    @programs.tutorials.level7Tutorial =
+      submenu: "Intro"
+      title: "level 7"
+      code: """
+            // Hier ist mein Schneemann
+
+            move 0, -0.6, 0
+            ball 1
+            move 0, 0.9, 0
+            ball 0.7
+            move 0, 0.6, 0
+            ball 0.4
+
+            // als nächstes wollen wir dem Schneemann das Tanzen beibringen
+            // dazu brauchen wir noch einen neuen Befehl
+
+            // next-tutorial:level8
+
+            """
+
+    @programs.tutorials.level8Tutorial =
+      submenu: "Intro"
+      title: "level 8"
+      code: """
+            // Der Befehl heißt 'rotate'
+            // Mit 'rotate' kannst du den Computer Dinge drehen lassen
+            // 'rotate' funktioniert so ähnlich wie 'move'
+
+
+            rotate 0, 0, 0
+            ball
+
+
+            // Versuche Herauszufinden welche Zahl in welche Richtung dreht
+
+            // next-tutorial:level9
+
+            """
+
+
+    @programs.tutorials.level9Tutorial =
+      submenu: "Intro"
+      title: "level 9"
+      code: """
+            // Bisher haben wir die Befehle immer mit Zahlen verändert
+            // Versuch einmal was passiert,
+            // wenn du eine der Zahlen durch 'time' ersetz
+
+
+            rotate 0, 0, 0
+            ball
+
+            // 'time' enthält die aktuelle Zeit
+            //  damit ändert sich der Wert immer wenn der Computer neu zeichnet
+
+            //  Was passier, wenn du 'time/10' schreibst?
+            //  Wie kannst du den Ball scheller drehen?
+
+            // next-tutorial:level10
+
+            """
+
+
+    @programs.tutorials.level10Tutorial =
+      submenu: "Intro"
+      title: "level 10"
+      code: """
+            // wieder zurUck zum Schneemann
+            // füge 'rotate 0, time, 0' an
+            // unterschiedlichen Stellen ein und schau was passiert
+
+            move 0, -0.6, 0
+            ball 1
+            move 0, 0.9, 0
+            ball 0.7
+            move 0, 0.6, 0
+            ball 0.4
+            """
+
+
+    @programs.tutorials.animationTutorial =
       submenu: "Animation"
       title: "frame"
       code: """
-            // make the box spin
+            // Du kannst auch
             // by replacing '1' with 'frame'
 
             rotate 1
@@ -694,7 +812,7 @@ class ProgramLoader
             // always incrementing as
             // the screen is re-drawn.
             // (use 'frame / 100' to slow it down)
-            // next-tutorial:time
+            // next-tutorial:level6Tutorial
             """
 
     @programs.tutorials.timeTutorial =
